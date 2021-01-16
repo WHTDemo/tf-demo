@@ -17,7 +17,7 @@ terraform {
 
 
 resource "aws_iam_user" "test" {
-  name = var.resource_name
+  name = test
   path = "/system/"
   tags = {
     tag-key = "tag-value"
