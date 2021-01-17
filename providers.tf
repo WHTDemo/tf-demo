@@ -1,9 +1,10 @@
 provider "aws" {
- 
+
   region = "us-east-1"
 
 }
 
+data "aws_caller_identity" "current" {}
 
 terraform {
   required_version = ">= 0.12.4"
@@ -13,10 +14,4 @@ terraform {
       source  = "hashicorp/aws"
     }
   }
-}
-
-
-resource "aws_iam_user" "test" {
-  name = "test"
-  path = "/system/"
 }
