@@ -1,6 +1,6 @@
 provider "aws" {
 
-  region  = "us-east-2"
+  region  = "us-east-1"
   alias   = "a-role"
   profile = "arole"
   assume_role {
@@ -11,10 +11,11 @@ provider "aws" {
 }
 
 resource "aws_iam_user" "assume-user" {
-  name     = "user1"
+  name     = "assume-user"
   path     = "/system/"
   provider = aws.a-role
 }
+
 
 resource "aws_iam_user_policy" "assume_ploicy" {
   name = "auume-policy"
@@ -34,7 +35,7 @@ resource "aws_iam_user_policy" "assume_ploicy" {
 EOF
 }
 
-output "arole_id" {
+/* output "arole_id" {
   value = data.aws_caller_identity.current.id
-}
+} */
 

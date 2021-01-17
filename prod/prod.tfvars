@@ -1,1 +1,1 @@
-environment = "Prod"
+environment = "prod"

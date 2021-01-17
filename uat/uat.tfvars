@@ -1,1 +1,1 @@
-environment = "UAT"
+environment = "uat"

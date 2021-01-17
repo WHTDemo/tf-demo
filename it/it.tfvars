@@ -1,1 +1,1 @@
-environment = "IT"
+environment = "it"
